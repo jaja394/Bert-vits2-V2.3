@@ -52,7 +52,7 @@ bert_gen:
   num_processes: 4
   # 使用设备：可选项 "cuda" 显卡推理，"cpu" cpu推理
   # 该选项同时决定了get_bert_feature的默认设备
-  device: "cpu"
+  device: "cuda"
   # 使用多卡推理
   use_multi_device: false
 
@@ -64,7 +64,7 @@ emo_gen:
   # 并行数
   num_processes: 4
   # 使用设备：可选项 "cuda" 显卡推理，"cpu" cpu推理
-  device: "cpu"
+  device: "cuda"
   # 使用多卡推理
   use_multi_device: false
 
@@ -100,7 +100,7 @@ train_ms:
 # 注意， “:” 后需要加空格
 webui:
   # 推理设备
-  device: "cpu"
+  device: "cuda"
   # 模型路径
   model: "models/G_150.pth"
   # 配置文件路径
@@ -122,7 +122,7 @@ server:
   # 端口号
   port: 5000
   # 模型默认使用设备：但是当前并没有实现这个配置。
-  device: "cpu"
+  device: "cuda"
   # 需要加载的所有模型的配置，可以填多个模型，也可以不填模型，等网页成功后手动加载模型
   # 不加载模型的配置格式：删除默认给的两个模型配置，给models赋值 [ ]，也就是空列表。参考模型2的speakers 即 models: [ ]
   # 注意，所有模型都必须正确配置model与config的路径，空路径会导致加载错误。
@@ -133,7 +133,7 @@ server:
       # 模型config.json的路径
       config: ""
       # 模型使用设备，若填写则会覆盖默认配置
-      device: "cpu"
+      device: "cuda"
       # 模型默认使用的语言
       language: "ZH"
       # 模型人物默认参数
@@ -160,9 +160,9 @@ server:
       # 模型config.json的路径
       config: ""
       # 模型使用设备，若填写则会覆盖默认配置
-      device: "cpu"
+      device: "cuda"
       # 模型默认使用的语言
-      language: "JP"
+      language: "CN"
       # 模型人物默认参数
       # 不必填写所有人物，不填的使用默认值
       speakers: [ ] # 也可以不填
