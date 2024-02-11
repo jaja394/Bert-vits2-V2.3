@@ -64,7 +64,7 @@ emo_gen:
   # 并行数
   num_processes: 4
   # 使用设备：可选项 "cuda" 显卡推理，"cpu" cpu推理
-  device: "cuda"
+  device: "cpu"
   # 使用多卡推理
   use_multi_device: false
 
