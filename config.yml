@@ -102,7 +102,7 @@ webui:
   # 推理设备
   device: "cuda"
   # 模型路径
-  model: "models/G_150.pth"
+  model: "models/G_50.pth"
   # 配置文件路径
   config_path: "config.json"
   # 端口号
@@ -162,7 +162,7 @@ server:
       # 模型使用设备，若填写则会覆盖默认配置
       device: "cuda"
       # 模型默认使用的语言
-      language: "CJE"
+      language: "ZH"
       # 模型人物默认参数
       # 不必填写所有人物，不填的使用默认值
       speakers: [ ] # 也可以不填
